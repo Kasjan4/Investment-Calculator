@@ -48,7 +48,9 @@ const Home = () => {
   return <div className="home">
 
     <div className='player-wrapper'>
-      <ReactPlayer style={video ? { opacity: 1 } : { opacity: 0 }} onLoad={() => setVideo(true)} playing={true} loop={true} muted={true} url={path + '/video/analysis.mp4'} width='100%' height='100%' />
+      <Fade>
+        <ReactPlayer style={video ? { opacity: 1 } : { opacity: 0 }} onReady={() => setVideo(true)} playing={true} loop={true} muted={true} url={path + '/video/analysis.mp4'} width='100%' height='100%' />
+      </Fade>
     </div>
 
     <Fade down>
