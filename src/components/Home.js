@@ -12,7 +12,7 @@ const Home = () => {
 
   const [investment, setInvestment] = useState({ initial: '', monthly: '', years: '', yield: '', ready: false })
   const [result, setResult] = useState([])
-
+  const path = window.location.href
 
 
   function handleChange(event) {
@@ -53,7 +53,7 @@ const Home = () => {
   return <div className="home">
 
     <div className='player-wrapper'>
-      <ReactPlayer playing={true} loop={true} muted={true} url='window.location.href/video/analysis.mp4' width='100%' height='100%' />
+      <ReactPlayer playing={true} loop={true} muted={true} url={path + './video/analysis.mp4'} width='100%' height='100%' />
     </div>
 
     <Fade down>
