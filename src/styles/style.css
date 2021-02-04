@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Raleway:wght@400;700&display=swap');
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: black;
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  overflow-y: hidden;
+}
+
+.player-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: -999;
+  overflow-y: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  color: white!important;
+  box-sizing: border-box;
+}
+
+/* HOME */
+
+form {
+  width: 20rem!important;
+  display: flex!important;
+  flex-direction: column!important;
+  justify-content: center!important;
+  align-items: center!important;
+}
+
+input {
+  font-size: 1.5rem!important;
+  color: white!important;
+  font-weight: 300!important;
+  border-radius: 0!important;
+  border: 0!important;
+  border-bottom: 1px solid rgb(0, 89, 255)!important;
+  background-color: transparent!important;
+
+}
+
+.form-group {
+  backdrop-filter: blur(15px)!important;
+  -webkit-backdrop-filter: blur(15px)!important;
+}
+
+button {
+  border-radius: 0!important;
+  background-color: transparent!important;
+  border-color: rgb(0, 89, 255)!important;
+  font-weight: 300!important;
+}
+
+button:hover {
+  background-color: rgb(30, 109, 255)!important;
+  border-color: rgb(30, 109, 255)!important;
+}
+
+.btn-custom {
+  width: max-content!important;
+}
+
+.title {
+  position: absolute;
+  top: 2rem;
+  font-size: 2.5rem;
+  color: rgb(255, 255, 255, 0.4);
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+
+
+.results {
+  color: white!important;
+  overflow-y: scroll!important;
+  height: 50vh;
+  backdrop-filter: blur(15px)!important;
+  -webkit-backdrop-filter: blur(15px)!important;
+  /* border: 1px solid rgb(0, 89, 255); */
+}
+
+tbody {
+  
+  height: 50vh;
+}
+
+th {
+  font-weight: 300;
+}
+
+.table-top {
+  padding: .5rem;
+  font-weight: 600;
+}
+
+.year {
+  font-weight: 600;
+}
+
+.end {
+  color: green!important;
+}
+
+
+
+
+
+
+
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
