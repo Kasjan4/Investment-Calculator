@@ -1,7 +1,5 @@
-/* eslint-disable react/jsx-key */
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import axios from 'axios'
+
+import React, { useState } from 'react'
 import ReactPlayer from 'react-player'
 import Fade from 'react-reveal/Fade'
 
@@ -9,18 +7,16 @@ import Fade from 'react-reveal/Fade'
 
 const Home = () => {
 
-
   const [investment, setInvestment] = useState({ initial: '', monthly: '', years: '', yield: '', ready: false })
   const [result, setResult] = useState([])
+  const [video, setVideo] = useState(false)
   const path = window.location.href
-
 
   function handleChange(event) {
     const name = event.target.name
     const value = event.target.value
     let input = { ...investment, [name]: value }
     setInvestment(input)
-
   }
 
   function handleSubmit(event) {
@@ -48,12 +44,11 @@ const Home = () => {
 
 
 
-  console.log(investment)
-  console.log(result)
+
   return <div className="home">
 
     <div className='player-wrapper'>
-      <ReactPlayer playing={true} loop={true} muted={true} url={path + '/video/analysis.mp4'} width='100%' height='100%' />
+      <ReactPlayer style={video ? { opacity: 1 } : { opacity: 0 }} onLoad={() => setVideo(true)} playing={true} loop={true} muted={true} url={path + '/video/analysis.mp4'} width='100%' height='100%' />
     </div>
 
     <Fade down>
