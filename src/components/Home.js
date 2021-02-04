@@ -53,7 +53,7 @@ const Home = () => {
   return <div className="home">
 
     <div className='player-wrapper'>
-      <ReactPlayer playing={true} loop={true} muted={true} url='./video/analysis.mp4' width='100%' height='100%' />
+      <ReactPlayer playing={true} loop={true} muted={true} url='window.location.href/video/analysis.mp4' width='100%' height='100%' />
     </div>
 
     <Fade down>
