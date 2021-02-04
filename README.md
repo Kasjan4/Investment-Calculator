@@ -18,7 +18,3 @@ Made with React Hooks, a calculator to show investment stats year by year.
 - Pixlr editor
 - Google Fonts
 - Royalty free video
-
-
-///
-///
