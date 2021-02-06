@@ -109,6 +109,7 @@ th {
 .table-top {
   padding: .5rem;
   font-weight: 600;
+  text-decoration: underline;
 }
 
 .year {

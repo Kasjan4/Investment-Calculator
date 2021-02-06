@@ -29,10 +29,10 @@ const Home = () => {
 
       let row = {}
       row.year = i
-      row.startBalance = sum.toFixed(2)
-      row.monthlyContribution = (Number(investment.monthly) * 12).toFixed(2)
-      row.reinvested = (sum / Number(investment.yield)).toFixed(2)
-      row.endBalance = (sum + (sum / Number(investment.yield)) + Number(investment.monthly) * 12).toFixed(2)
+      row.startBalance = numberWithCommas(sum.toFixed(2))
+      row.monthlyContribution = numberWithCommas((Number(investment.monthly) * 12).toFixed(2))
+      row.reinvested = numberWithCommas((sum / Number(investment.yield)).toFixed(2))
+      row.endBalance = numberWithCommas((sum + (sum / Number(investment.yield)) + Number(investment.monthly) * 12).toFixed(2))
       arr.push(row)
 
       sum = sum + (sum / Number(investment.yield)) + Number(investment.monthly) * 12
@@ -40,10 +40,15 @@ const Home = () => {
 
     setInvestment({ ...investment, ['ready']: true })
     setResult(arr)
+    console.log(typeof arr[0].startBalance)
   }
 
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+}
 
 
+  
 
   return <div className="home">
 
